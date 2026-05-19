@@ -70,8 +70,10 @@ func downloader(escolher uint8) {
 }
 
 func main() {
+	if len(os.Args) < 3 {
+		fmt.Println("Uso: ./downloader <URL> <PASTA>")
+		os.Exit(1)
+	}
 	escolha := menu()
 	downloader(escolha)
 }
-
-
