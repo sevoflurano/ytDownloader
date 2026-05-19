@@ -1,0 +1,11 @@
+*.mp3
+*.mp4
+*.webm
+*.m4a
+*.wav
+*.opus
+musicas/
+downloader
+*.exe
+*.tmp
+*.log
