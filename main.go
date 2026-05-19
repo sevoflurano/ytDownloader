@@ -23,6 +23,17 @@ func menu() uint8 {
 	}
 }
 
+func validar_pasta(pasta string) error {
+	info, err := os.Stat(pasta)
+	if err != nil {
+		return fmt.Errorf("Pasta não existe: %v", err)
+	}
+	if !info.IsDir() {
+		return fmt.Errorf("%s Não é uma pasta", pasta)
+	}
+	return nil
+}
+
 func menuAudio() uint8 {
 	var escolha uint8
 	for {
